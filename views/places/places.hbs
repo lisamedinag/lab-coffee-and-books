@@ -1,0 +1,25 @@
+
+<div class="info">
+    <h3>List of all places</h3>
+    <a href="/places/new">Create new place</a>
+    <ol>
+        {{#each places}}
+        <li>
+            <a href="places/{{this._id}}">{{this.name}}</a>
+            |
+            <a href="places/{{this._id}}/delete">Delete</a>
+        </li>
+        {{/each }}
+    </ol><br>
+    <a href="/">Back home</a><br>
+    <div id="map"></div>
+
+    {{!-- add map here --}}
+</div>
+
+<style>
+  #map {
+      width: 100%;
+      height: 400px;
+  }
+</style>
